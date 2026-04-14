@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "cv-maker-5145f"
+  },
+  "targets": {
+    "cv-maker-5145f": {
+      "hosting": {
+        "app": ["cv-maker-5145f-59e3f"]
+      }
+    }
+  }
+}

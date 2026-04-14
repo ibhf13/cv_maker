@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Cancel in-progress runs for the same PR / branch when a new push lands.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# Read-only permissions — CI verifies, it never writes to the repo.
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Lint · Type-check · Test · Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint (ESLint — zero tolerance)
+        run: npm run lint
+
+      - name: Type-check (tsc --noEmit)
+        run: npm run type-check
+
+      - name: Test (Vitest)
+        run: npm run test
+
+      - name: Build (vite build)
+        run: npm run build

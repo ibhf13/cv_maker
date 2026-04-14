@@ -1,0 +1,8 @@
+export { PersonalTab } from "./personal-tab"
+export { SummaryTab } from "./summary-tab"
+export { ExperienceTab } from "./experience-tab"
+export { EducationTab } from "./education-tab"
+export { SkillsTab } from "./skills-tab"
+export { LanguagesTab } from "./languages-tab"
+export { ProjectsTab } from "./projects-tab"
+export { ExtraTab } from "./extra-tab"

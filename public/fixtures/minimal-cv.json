@@ -1,0 +1,39 @@
+{
+  "personal_info": {
+    "name": "Minimal User",
+    "date_of_birth": "",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "linkedin": ""
+  },
+  "summary": "",
+  "experience": [
+    {
+      "title": "Developer",
+      "company": "Acme",
+      "location": "Remote",
+      "period": { "start": "01/2024", "end": null, "current": true },
+      "description": ["One bullet for PDF minimal-page testing."]
+    }
+  ],
+  "education": {
+    "degree": "",
+    "institution": "",
+    "location": "",
+    "period": { "start": "", "end": "" },
+    "thesis": ""
+  },
+  "certifications": [],
+  "skills": {
+    "frontend": [],
+    "testing": [],
+    "backend": [],
+    "tools": [],
+    "soft_skills": []
+  },
+  "projects": [],
+  "languages": [],
+  "interests": []
+}
